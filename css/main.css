@@ -1,0 +1,145 @@
+body
+{
+    background-color: red;
+    color: black;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 17px;
+}
+
+h1
+{
+    margin-top: 50px;
+    font-size: 40px;
+    font-weight: 400;
+    color: red;
+    font-weight: bold;
+    /*margin: 20px;*/
+}
+p{
+    font-size: 20px;
+}
+
+
+.container{     
+    width: 90%;
+    margin: 0 auto;
+    background-color: white;
+    overflow: hidden;
+}
+
+header{
+    text-align: center;
+    padding: 15px;
+}
+
+
+.desktop{
+    width: 33%;
+    float: left;
+    text-align: center;
+    margin: 0 auto;
+    margin-bottom: 10px;
+
+}
+figure{
+    width: 90%;
+    margin: 0 auto;
+}
+img{
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
+}
+#rp{
+    background-color: red;
+    color:white;
+}
+#rep{
+    width: 100%;
+    margin-bottom: 25px;
+    padding-top: 10px;
+    color: red;
+    font-size: 25px;
+    font-weight: bold;
+}
+#lewy{
+    color: red;
+    font-weight: bold;
+
+}
+hr{
+    background-color: red;
+}
+/**/
+h2{
+    font-size: 28px;
+    padding: 10px;
+    text-align: justify;
+    letter-spacing: 10px;
+}
+
+#naglowek{
+    font-size: 70px;
+    margin-bottom: 0px;
+}
+
+article{
+    width: 90%;
+    margin: 0 auto;
+}
+
+.pojemnik{
+    display: flex;
+}
+.pojemnik figure{
+    flex: 3;
+    margin-top: 20px;
+}
+.pojemnik p{
+    flex: 7;
+}
+#lw{
+    margin-right: 20px;
+}
+#kontakt2 img, #rp2{
+    width: 70%;
+    background-color: red;
+    color:white;
+}
+@media all and (max-width: 1024px) {
+    #lewy{
+        width: 100%;
+    }
+    .desktop{
+        width: 50%;
+    }
+    .pojemnik{
+        display: block;
+    }
+    #lw{
+        margin: 0 auto;
+    }
+    #naglowek{
+        font-size: 63px;
+    }
+    #kontakt2 img, #rp2{
+        width: 80%;
+        font-size: 16px;
+    }
+
+
+}
+
+/*480PX?*/
+@media all and (max-width: 600px) { 
+    .desktop{
+        width: 100%;
+    }
+    #naglowek{
+        font-size: 56px;
+    }
+    #kontakt2 img, #rp2{
+        width: 90%;
+        font-size: 14px;
+    }
+}

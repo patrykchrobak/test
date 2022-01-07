@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="pl">
+    <head>
+
+        <title>Piłkarze reprezentacji Polski</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">	
+        <meta name="author" content="Patryk Chrobak">
+
+        <link type="text/css" rel="stylesheet" href="css/main.css">
+        <link type="text/css" rel="stylesheet" href="css/belka.css">
+        <style>
+            p{
+                display: inline;
+            }
+        </style>
+    </head>
+
+    <body>
+        <!--        <header>-->
+
+        <nav>
+
+            <div class="menu">
+                <div class="bloki">
+                    <a href="index.html">Strona główna</a>
+                </div>
+                <div class="bloki">
+                    <a href="kadra.html">O kadrze</a>
+                </div>
+                <div class="bloki dropdown">
+                    <a href="#">Zawodnicy</a>
+                    <ul>
+                        <li><a href="zawodnicy/lewy.html">Robert Lewandowski</a></li>
+                        <li><a href="zawodnicy/szczena.html">Wojciech Szczęsny</a></li>
+                        <li><a href="zawodnicy/milik.html">Arkadiusz Milik</a></li>
+                        <li><a href="zawodnicy/glik.html">Kamil Glik</a></li>
+                        <li><a href="zawodnicy/moder.html">Jakub Moder</a></li>
+                        <li><a href="zawodnicy/bedi.html">Jan Bednarek</a></li>
+                        <li><a href="zawodnicy/krychowiak.html">Grzegorz Krychowiak</a></li>
+                        <li><a href="zawodnicy/pio.html">Krzysztof Piątek</a></li>
+                        <li><a href="zawodnicy/klich.html">Mateusz Klich</a></li>
+                    </ul>
+
+                </div>
+                <div class="bloki">
+                    <a href="gra.html" style="color: red">Zagraj w gre</a>
+                </div>
+                <div class="bloki" id="kontakt">
+                    <a href="kontakt.html">Kontakt</a>
+                </div>
+            </div>
+        </nav>
+
+
+        <main>
+
+            <section>
+
+                <div class="container" style="margin-top: 50px">
+                    
+                    <h1 style="text-align: center">Quiz o Reprezentacji Polski</h1>
+                    <hr><br>
+
+                    <div id="gra" style="margin-left: 5px;">
+                        <p style="font-weight: bold" id="pyt1">pytanie</p> <br><br>
+                        <input  type="radio" name="p1" value="A" /><p id="1odp1">a</p> <br><br>
+                        <input type="radio" name="p1" value="B" /><p id="1odp2">b</p> <br><br>
+                        <input  type="radio" name="p1" value="C" /><p id="1odp3">c</p> <br><br>
+                        <input   type="radio" name="p1" value="D" /><p id="1odp4">d</p><br><br>
+                        
+                        <hr><br>
+
+                        <p style="font-weight: bold" id="pyt2">pytanie</p> <br><br>
+                        <input  type="radio" name="p2" value="A" /><p id="2odp1">a</p> <br><br>
+                        <input type="radio" name="p2" value="B" /><p id="2odp2">b</p> <br><br>
+                        <input  type="radio" name="p2" value="C" /><p id="2odp3">c</p> <br><br>
+                        <input   type="radio" name="p2" value="D" /><p id="2odp4">d</p><br><br>
+                        
+                        <hr><br>
+
+                        <p style="font-weight: bold" id="pyt3">pytanie</p> <br><br>
+                        <input  type="radio" name="p3" value="A" /><p id="3odp1">a</p> <br><br>
+                        <input type="radio" name="p3" value="B" /><p id="3odp2">b</p> <br><br>
+                        <input  type="radio" name="p3" value="C" /><p id="3odp3">c</p> <br><br>
+                        <input   type="radio" name="p3" value="D" /><p id="3odp4">d</p><br><br>
+                        
+                        <hr><br>
+                        
+                        <p style="font-weight: bold" id="pyt4">pytanie</p> <br><br>
+                        <input  type="radio" name="p4" value="A" /><p id="4odp1">a</p> <br><br>
+                        <input type="radio" name="p4" value="B" /><p id="4odp2">b</p> <br><br>
+                        <input  type="radio" name="p4" value="C" /><p id="4odp3">c</p> <br><br>
+                        <input   type="radio" name="p4" value="D" /><p id="4odp4">d</p><br><br>
+                        
+                        <hr><br>
+
+                        <p style="font-weight: bold" id="pyt5">pytanie</p> <br><br>
+                        <input  type="radio" name="p5" value="A" /><p id="5odp1">a</p> <br><br>
+                        <input type="radio" name="p5" value="B" /><p id="5odp2">b</p> <br><br>
+                        <input  type="radio" name="p5" value="C" /><p id="5odp3">c</p> <br><br>
+                        <input   type="radio" name="p5" value="D" /><p id="5odp4">d</p><br><br>
+                        
+                        <hr>
+                        
+                        <input style="font-size: 30px; color:red; padding: 2px; display: block; margin: 0 auto; margin-bottom: 10px" type="submit" value="koniec" onclick="wynik()"/> 
+                        <hr>
+                        <div id="wynik" style="text-align: center; font-size: 30px; padding: 10px">TU BĘDZIE TWÓJ WYNIK</div>
+                        <input onClick="location.reload()" style="font-size: 25px; color:red; padding: 2px; display: block; margin: 0 auto; margin-bottom: 10px; margin-top: 10px" type="submit" value="Wylosuj nowy zestaw pytań" />
+                    </div>
+                    <script>
+                        pytania = [
+                            ["Z jakim Numerem gra Wojciech Szczęsny?",
+                                "A.69",
+                                "B.1",
+                                "C.12",
+                                "D.19",
+                                "B"],
+                            ["Kto jest obecnym Kapitanem Reprezentacji Polski?",
+                                "A.Krzysztof Piątek",
+                                "B.Robert Lewandowski",
+                                "C.Thiago Cionek",
+                                "D.Kamil Grabara",
+                                "B"
+                            ],
+                            ["Który z Zawodników Reprezentancji jest Obecnym Graczem Legii Warszawa?",
+                                "A.Bartosz Slisz",
+                                "B.Jakub Moder",
+                                "C.Przemysław Frankowski",
+                                "D.Kamil Glik",
+                                "A"
+                            ],
+                            ["Kto prowadził Kadrę Polski na Mistrzostwach Europy 2016?",
+                                    "A.Włodzimierz Szaranowicz",
+                                    "B.Adam Nawałka",
+                                    "C.Waldemar Fornalik",
+                                    "D.Jacek Zieliński",
+                                    "B"
+                            ],
+                            ["Kto strzelił Gola przeciwko Senegalowi w 2018 na Mistrzostwach Świata w Rosji?",
+                                    "A.Grzegorz Krychowiak",
+                                    "B.Robert Lewandowski",
+                                    "C.Łukasz Teodorczyk",
+                                    "D.Matty(Mateusz) Cash",
+                                    "A"
+                            ],
+                            ["Który z obecnych Kadrowiczów ma Polskie i Angielskie korzenia?",
+                                    "A.Wojciech Szczesny",
+                                    "B.Arkadiusz Milik",
+                                    "C.Matty(Mateusz) Cash",
+                                    "D.Przemysław Płacheta",
+                                    "C"
+                            ],
+                            ["W Jakim klubie gra Robert Lewandowski?",
+                                    "A.Borussia Dortmund",
+                                    "B.Real Betis",
+                                    "C.Bayern Monachium II",
+                                    "D.Bayern Monachium",
+                                    "D"
+                            ],
+                            ["Kto grał w jednej drużynie z Cristiano Ronaldo?",
+                                    "A.Sławomir Peszko",
+                                    "B.Robert Lewandowski",
+                                    "C.Wojciech Szczesny",
+                                    "D.Artur Boruc",
+                                    "C"
+                            ],
+                            ["Kto przed Robertem Lewandowski był Kapitanem Kadry?",
+                                    "A.Krzysztof Mączyński",
+                                    "B.Jakub Błaszczykowski",
+                                    "C.Przemysław Tytoń",
+                                    "D.Michał Kucharczyk",
+                                    "B"
+                            ],
+                            ["Kto podczas Meczu na Mistrzostwach Europy 2012 dostał czerwoną kartkę podczas Meczu Polska VS Grecja?",
+                                    "A.Eugen Polanski",
+                                    "B.Sebastian Boenisch",
+                                    "C.Łukasz Trałka",
+                                    "D.Wojciech Szczęsny",
+                                    "D"
+                            ],
+                            ["Kto obronił Rzut karny podczas meczu Euro 2012 Polska vs Grecja?",
+                                    "A.Przemysław Tytoń",
+                                    "B.Łukasz Fabiański",
+                                    "C.Wojciech Szczęsny",
+                                    "D.Radosław Cierzniak",
+                                    "A"
+                            ],
+                            ["Gdzie aktualnie gra ulubieniec fanów z Euro 2016, czyli Michał Pazdan?",
+                                    "A.Barcelona",
+                                    "B.Legia",
+                                    "C.Jagiellonia",
+                                    "D.Górnik Polkowice",
+                                    "C"
+                            ],
+                            ["Kto strzelił gola przeciwko Hiszpanii na Euro 2020?",
+                                    "A.Krzysztof Piątek",
+                                    "B.Adam Buksa",
+                                    "C.Arkadiusz Milik",
+                                    "D.Robert Lewandowski",
+                                    "D"
+                            ],
+                            ["Kto strzelił bramkę na 2:0 w historycznym, zwycięskim meczu z Niemcami w 2014 roku?",
+                                    "A.Robert Lewandowski",
+                                    "B.Piotr Zieliński",
+                                    "C.Sebastian Mila",
+                                    "D.Arkadiusz Milik",
+                                    "C"
+                            ]
+                        ]
+
+                        function wynik() {
+                            var rezultat=document.getElementById("wynik");
+                            
+                            var p1 = document.getElementsByName('p1');
+                            var p2 = document.getElementsByName('p2');
+                            var p3 = document.getElementsByName('p3');
+                            var p4 = document.getElementsByName('p4');
+                            var p5 = document.getElementsByName('p5');
+                            
+                            var q1;
+                            var q2;
+                            var q3;
+                            var q4;
+                            var q5;
+                            
+                            for (var k = 0; k < p1.length; k++) {
+                            if (p1[k].checked) q1 = p1[k].value;                            
+                            if (p2[k].checked) q2 = p2[k].value; 
+                            if (p3[k].checked) q3 = p3[k].value; 
+                            if (p4[k].checked) q4 = p4[k].value; 
+                            if (p5[k].checked) q5 = p5[k].value; 
+
+                              }
+                            console.log(q1);
+                            console.log(q2);
+                            console.log(q3);
+                            console.log(q4);
+                            console.log(q5);
+                            
+                            var punkty=0;
+                            if(q1===odpowiedzi[0]) punkty++;
+                            if(q2===odpowiedzi[1]) punkty++;
+                            if(q3===odpowiedzi[2]) punkty++;
+                            if(q4===odpowiedzi[3]) punkty++;
+                            if(q5===odpowiedzi[4]) punkty++;
+                        console.log(punkty);
+                        if(punkty===0) rezultat.innerHTML="Twój wynik to: "+punkty+"<br>Dopiero poznajesz naszą kadrę. Możesz wykonać quiz ponownie lub wylosować nowy zestaw pytań";
+                        else if(punkty===1) rezultat.innerHTML="Twój wynik to: "+punkty+"<br>1 punkt, czyli tyle ile reprezentacja zdoyła punktów na Euro 2020. Jak wiemy nie dało nam to awansu...<br> Możesz wykonać quiz ponownie lub wylosować nowy zestaw pytań";
+                        else if(punkty===2) rezultat.innerHTML="Twój wynik to: "+punkty+"<br>Powinieneś oglądać więcej meczów naszej kadry ;)<br> Możesz wykonać quiz ponownie lub wylosować nowy zestaw pytań";
+                        else if(punkty===3) rezultat.innerHTML="Twój wynik to: "+punkty+"<br>Twój wynik jest dobry, ale masz trochę do nadrobienia<br> Możesz wykonać quiz ponownie lub wylosować nowy zestaw pytań";
+                        else if(punkty===4) rezultat.innerHTML="Twój wynik to: "+punkty+"<br>Znasz bardzo dobrze naszą kadrę!<br> Możesz wykonać quiz ponownie lub wylosować nowy zestaw pytań";
+                        else if(punkty===5) rezultat.innerHTML="Twój wynik to: "+punkty+"<br>Czy jesteś członkiem reprezentacji Polski? Gratulacje, znasz wyśmienicie naszą kadrę!<br> Możesz wykonać quiz ponownie lub wylosować nowy zestaw pytań";
+                        }
+                        
+                        var pytania_tab_pomocnicza = [];
+                        pytania_tab_pomocnicza = pytania;
+                        var i = 1;
+                        var odpowiedzi=[]
+                        while (i <= 5) {
+                            var los = Math.floor(Math.random() * pytania_tab_pomocnicza.length);
+                            document.getElementById("pyt"+i.toString()).innerHTML = pytania[los][0];
+                            document.getElementById(i.toString()+"odp1").innerHTML = pytania[los][1];
+                            document.getElementById(i.toString()+"odp2").innerHTML = pytania[los][2];
+                            document.getElementById(i.toString()+"odp3").innerHTML = pytania[los][3];
+                            document.getElementById(i.toString()+"odp4").innerHTML = pytania[los][4];
+                            odpowiedzi.push(pytania[los][5]);
+                            
+//                            console.log(odpowiedzi);
+                            pytania_tab_pomocnicza.splice(los, 1);
+                            i++;
+                        }
+
+                    </script>
+                </div>
+
+            </section>
+
+        </main>
+    </body>
+</html>
