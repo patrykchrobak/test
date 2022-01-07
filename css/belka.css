@@ -74,12 +74,16 @@
 
 }
 
-/*480PX?*/
 @media all and (max-width: 600px) { 
     .bloki{
         /*padding: 5px;*/
         padding-left: 5px;
         padding-right: 5px;
-        font-size: 17px;
+        font-size: 16px;
     }
+    .dropdown ul li a{
+    font-size: 16px;
+    
+    
+}
 }
